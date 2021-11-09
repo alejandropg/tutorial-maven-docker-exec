@@ -1,0 +1,12 @@
+services:
+  it-ddbb:
+    image: postgres:13.3-alpine
+    ports:
+      - 5432:5432
+    volumes:
+      - it-ddbb:/var/lib/postgresql/data:delegated
+    environment:
+      POSTGRES_PASSWORD: password
+
+volumes:
+  it-ddbb:
