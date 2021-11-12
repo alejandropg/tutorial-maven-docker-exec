@@ -12,7 +12,7 @@ _docker_compose_get_image_name() {
 }
 
 _docker_compose_pull_image() {    
-    docker image inspect "${1}" 2>&1 1>/dev/null
+    docker image inspect "${1}" 1>/dev/null
     image_exist=$?
     if [ $image_exist != 0 ]; then
         echo '[INFO] Pull IT Docker images...'
